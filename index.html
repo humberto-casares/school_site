@@ -1,18 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrightStart Academy</title>
-    <!-- Tailwind CSS via CDN -->
+    <title>Liceo Británico</title>
+    <!-- Tailwind CSS vía CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons (optional but nice) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Tiny custom style for subtle extras (optional) -->
+    <!-- Estilos personalizados para colores exactos de la bandera británica -->
     <style>
-        /* Minimal custom touches – everything else is Tailwind */
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        /* Colores bandera británica: azul (#012169), rojo (#C8102E), blanco */
+        .bg-british-blue {
+            background-color: #012169;
+        }
+        .bg-british-red {
+            background-color: #C8102E;
+        }
+        .text-british-blue {
+            color: #012169;
+        }
+        .text-british-red {
+            color: #C8102E;
+        }
+        .border-british-blue {
+            border-color: #012169;
+        }
+        .border-british-red {
+            border-color: #C8102E;
+        }
+        .hover\:bg-british-red:hover {
+            background-color: #a00d24;
+        }
+        .hover\:bg-british-blue:hover {
+            background-color: #001a4d;
+        }
+        .hover\:text-british-red:hover {
+            color: #C8102E;
+        }
+        .hover\:text-british-blue:hover {
+            color: #012169;
+        }
+        /* Fondo suave para secciones alternas */
+        .bg-soft {
+            background-color: #f0f4f8;
         }
         .hover-lift {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -21,186 +52,185 @@
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
+        /* Acento de borde */
         .accent-border {
-            border-bottom: 3px solid #f59e0b;
-        }
-        .bg-soft {
-            background-color: #f9fafb;
+            border-bottom: 3px solid #C8102E;
         }
     </style>
 </head>
 <body>
 
-    <!-- ========== NAVIGATION ========== -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- ========== NAVEGACIÓN ========== -->
+    <header class="bg-british-blue shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-graduation-cap text-amber-500 text-2xl"></i>
-                    <span class="text-xl font-bold text-gray-800">Bright<span class="text-amber-500">Start</span></span>
+                    <i class="fas fa-crown text-white text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Liceo <span class="text-british-red">Británico</span></span>
                 </div>
-                <!-- Nav links (desktop) -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-                    <a href="#" class="hover:text-amber-500 transition">Home</a>
-                    <a href="#" class="hover:text-amber-500 transition">About</a>
-                    <a href="#" class="hover:text-amber-500 transition">Programs</a>
-                    <a href="#" class="hover:text-amber-500 transition">Testimonials</a>
-                    <a href="#" class="hover:text-amber-500 transition">Contact</a>
+                <!-- Enlaces (escritorio) -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/90">
+                    <a href="#" class="hover:text-white transition border-b-2 border-transparent hover:border-british-red pb-1">Inicio</a>
+                    <a href="#" class="hover:text-white transition border-b-2 border-transparent hover:border-british-red pb-1">Nosotros</a>
+                    <a href="#" class="hover:text-white transition border-b-2 border-transparent hover:border-british-red pb-1">Programas</a>
+                    <a href="#" class="hover:text-white transition border-b-2 border-transparent hover:border-british-red pb-1">Testimonios</a>
+                    <a href="#" class="hover:text-white transition border-b-2 border-transparent hover:border-british-red pb-1">Contacto</a>
                 </nav>
-                <!-- CTA button -->
+                <!-- Botón CTA -->
                 <div class="hidden md:block">
-                    <a href="#" class="bg-amber-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-amber-600 transition shadow-sm">Enroll Now</a>
+                    <a href="#" class="bg-british-red text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-british-red hover:opacity-90 transition shadow-md">Admisiones</a>
                 </div>
-                <!-- Mobile menu toggle -->
-                <button class="md:hidden text-gray-600 hover:text-amber-500 focus:outline-none">
+                <!-- Menú móvil -->
+                <button class="md:hidden text-white hover:text-british-red focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- ========== HERO ========== -->
+    <!-- ========== HERO / INICIO ========== -->
     <section class="bg-white py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- Left content -->
+                <!-- Columna izquierda -->
                 <div class="flex-1 text-center md:text-left">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-                        Nurturing <br />
-                        <span class="text-amber-500">Curious Minds</span>
+                        Formando <br />
+                        <span class="text-british-red">mentes curiosas</span>
                     </h1>
                     <p class="mt-4 text-lg text-gray-500 max-w-lg mx-auto md:mx-0">
-                        Empowering students with knowledge, creativity, and character for a bright future.
+                        Inspiramos a nuestros estudiantes con conocimiento, creatividad y valores para un futuro brillante.
                     </p>
                     <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                        <a href="#" class="bg-amber-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition shadow-md hover:shadow-lg">Get Started</a>
-                        <a href="#" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition">Learn More</a>
+                        <a href="#" class="bg-british-red text-white px-8 py-3 rounded-full font-semibold hover:bg-british-red hover:opacity-90 transition shadow-md hover:shadow-lg">Inscríbete</a>
+                        <a href="#" class="border border-british-blue text-british-blue px-8 py-3 rounded-full font-semibold hover:bg-british-blue hover:text-white transition">Conoce más</a>
                     </div>
-                    <!-- Stats -->
+                    <!-- Estadísticas -->
                     <div class="mt-12 flex flex-wrap justify-center md:justify-start gap-8 text-gray-700">
                         <div>
-                            <span class="block text-2xl font-bold text-amber-500">98%</span>
-                            <span class="text-sm text-gray-500">Graduation Rate</span>
+                            <span class="block text-2xl font-bold text-british-red">98%</span>
+                            <span class="text-sm text-gray-500">Tasa de graduación</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-bold text-amber-500">500+</span>
-                            <span class="text-sm text-gray-500">Students</span>
+                            <span class="block text-2xl font-bold text-british-blue">500+</span>
+                            <span class="text-sm text-gray-500">Estudiantes</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-bold text-amber-500">20+</span>
-                            <span class="text-sm text-gray-500">Programs</span>
+                            <span class="block text-2xl font-bold text-british-red">20+</span>
+                            <span class="text-sm text-gray-500">Programas educativos</span>
                         </div>
                     </div>
                 </div>
-                <!-- Right image placeholder -->
+                <!-- Imagen (placeholder) -->
                 <div class="flex-1 flex justify-center">
-                    <div class="w-full max-w-md aspect-[4/3] bg-gray-100 rounded-3xl flex flex-col items-center justify-center p-8 text-gray-400 border border-gray-200 shadow-sm">
-                        <i class="fas fa-school text-6xl text-amber-300 mb-4"></i>
-                        <p class="text-sm text-gray-400">Campus Life</p>
+                    <div class="w-full max-w-md aspect-[4/3] bg-gray-100 rounded-3xl flex flex-col items-center justify-center p-8 text-gray-400 border-4 border-british-blue shadow-lg">
+                        <!-- Cambio de icono: ya no es bandera de USA -->
+                        <i class="fas fa-university text-6xl text-british-red mb-4"></i>
+                        <p class="text-sm text-gray-500 font-medium">Liceo Británico</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== ABOUT ========== -->
+    <!-- ========== NOSOTROS ========== -->
     <section class="py-16 bg-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">About <span class="text-amber-500">BrightStart</span></h2>
-                <p class="mt-2 text-gray-500 max-w-2xl mx-auto">A place where every child discovers their potential through holistic education.</p>
+                <h2 class="text-3xl font-bold text-gray-800">Sobre el <span class="text-british-red">Liceo Británico</span></h2>
+                <p class="mt-2 text-gray-500 max-w-2xl mx-auto">Un espacio donde cada niño descubre su potencial a través de una educación integral.</p>
             </div>
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="flex-1">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&crop=center" alt="School" class="rounded-2xl shadow-md w-full object-cover max-h-72" />
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&crop=center" alt="Colegio Liceo Británico" class="rounded-2xl shadow-md w-full object-cover max-h-72 border-4 border-british-blue" />
                 </div>
                 <div class="flex-1 space-y-4">
-                    <h3 class="text-2xl font-semibold text-gray-800">Building Tomorrow's Leaders</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800">Construyendo líderes del mañana</h3>
                     <p class="text-gray-500">
-                        Founded in 2010, BrightStart Academy combines modern teaching methods with a supportive environment. Our dedicated teachers inspire critical thinking, creativity, and a love for learning.
+                        Fundado en 2010, el Liceo Británico combina métodos pedagógicos modernos con un entorno de apoyo. Nuestros profesores fomentan el pensamiento crítico, la creatividad y el amor por el aprendizaje.
                     </p>
                     <p class="text-gray-500">
-                        We offer a balanced curriculum that includes STEM, arts, sports, and character education to prepare students for success in a changing world.
+                        Ofrecemos un currículo equilibrado que incluye ciencia, tecnología, artes, deportes y educación en valores, preparando a los alumnos para los desafíos del mundo actual.
                     </p>
-                    <a href="#" class="inline-block text-amber-500 font-medium hover:text-amber-600 transition">Read more →</a>
+                    <a href="#" class="inline-block text-british-red font-medium hover:text-british-blue transition">Leer más →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PROGRAMS ========== -->
+    <!-- ========== PROGRAMAS ========== -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">Our <span class="text-amber-500">Programs</span></h2>
-                <p class="mt-2 text-gray-500">Diverse learning paths for every interest and talent.</p>
+                <h2 class="text-3xl font-bold text-gray-800">Nuestros <span class="text-british-red">Programas</span></h2>
+                <p class="mt-2 text-gray-500">Rutas de aprendizaje diversas para cada interés y talento.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover-lift shadow-sm">
-                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-4">
+                <!-- Programa 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border-2 border-british-blue hover-lift shadow-sm">
+                    <div class="w-12 h-12 bg-british-blue/10 rounded-xl flex items-center justify-center text-british-red text-2xl mb-4">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">STEM</h3>
-                    <p class="text-gray-500 text-sm mt-1">Science, Technology, Engineering, and Mathematics with hands-on projects.</p>
-                    <a href="#" class="mt-4 inline-block text-amber-500 text-sm font-medium">Explore →</a>
+                    <h3 class="text-xl font-bold text-gray-800">Ciencia y Tecnología</h3>
+                    <p class="text-gray-500 text-sm mt-1">Robótica, programación, laboratorios y proyectos STEAM con enfoque práctico.</p>
+                    <a href="#" class="mt-4 inline-block text-british-red text-sm font-medium hover:text-british-blue transition">Explorar →</a>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover-lift shadow-sm">
-                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-4">
+                <!-- Programa 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border-2 border-british-blue hover-lift shadow-sm">
+                    <div class="w-12 h-12 bg-british-blue/10 rounded-xl flex items-center justify-center text-british-red text-2xl mb-4">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Arts & Music</h3>
-                    <p class="text-gray-500 text-sm mt-1">Visual arts, drama, and music programs to unleash creative expression.</p>
-                    <a href="#" class="mt-4 inline-block text-amber-500 text-sm font-medium">Explore →</a>
+                    <h3 class="text-xl font-bold text-gray-800">Artes y Música</h3>
+                    <p class="text-gray-500 text-sm mt-1">Artes plásticas, teatro, banda y coro para desarrollar la expresión creativa.</p>
+                    <a href="#" class="mt-4 inline-block text-british-red text-sm font-medium hover:text-british-blue transition">Explorar →</a>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover-lift shadow-sm">
-                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-4">
+                <!-- Programa 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border-2 border-british-blue hover-lift shadow-sm">
+                    <div class="w-12 h-12 bg-british-blue/10 rounded-xl flex items-center justify-center text-british-red text-2xl mb-4">
                         <i class="fas fa-running"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Sports</h3>
-                    <p class="text-gray-500 text-sm mt-1">Team sports, athletics, and physical education for healthy bodies and minds.</p>
-                    <a href="#" class="mt-4 inline-block text-amber-500 text-sm font-medium">Explore →</a>
+                    <h3 class="text-xl font-bold text-gray-800">Deportes</h3>
+                    <p class="text-gray-500 text-sm mt-1">Fútbol, baloncesto, natación y atletismo para formar equipos y hábitos saludables.</p>
+                    <a href="#" class="mt-4 inline-block text-british-red text-sm font-medium hover:text-british-blue transition">Explorar →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== TESTIMONIALS ========== -->
+    <!-- ========== TESTIMONIOS ========== -->
     <section class="py-16 bg-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">What <span class="text-amber-500">Parents Say</span></h2>
-                <p class="mt-2 text-gray-500">Real stories from our school community.</p>
+                <h2 class="text-3xl font-bold text-gray-800">Lo que dicen <span class="text-british-red">las familias</span></h2>
+                <p class="mt-2 text-gray-500">Historias reales de nuestra comunidad educativa.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="flex items-center gap-1 text-amber-400 mb-2">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-british-red">
+                    <div class="flex items-center gap-1 text-british-red mb-2">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 italic">“BrightStart has transformed my daughter’s confidence. The teachers are caring and the curriculum is engaging.”</p>
+                    <p class="text-gray-600 italic">“El Liceo Británico ha transformado la confianza de mi hija. Los profesores son dedicados y el currículo es muy motivador.”</p>
                     <div class="mt-4 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">JD</div>
+                        <div class="w-10 h-10 bg-british-blue rounded-full flex items-center justify-center text-white font-bold">JD</div>
                         <div>
-                            <p class="font-semibold text-gray-800 text-sm">Jessica Davis</p>
-                            <p class="text-xs text-gray-400">Parent of Grade 5 student</p>
+                            <p class="font-semibold text-gray-800 text-sm">Jessica Díaz</p>
+                            <p class="text-xs text-gray-400">Madre de estudiante de 5° grado</p>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="flex items-center gap-1 text-amber-400 mb-2">
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-british-blue">
+                    <div class="flex items-center gap-1 text-british-red mb-2">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 italic">“My son loves the STEM program. He comes home excited about what he learned every day. Highly recommend!”</p>
+                    <p class="text-gray-600 italic">“Mi hijo disfruta muchísimo el programa de robótica. Llega a casa emocionado cada día. ¡Lo recomiendo totalmente!”</p>
                     <div class="mt-4 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">MR</div>
+                        <div class="w-10 h-10 bg-british-red rounded-full flex items-center justify-center text-white font-bold">MR</div>
                         <div>
-                            <p class="font-semibold text-gray-800 text-sm">Michael Rivera</p>
-                            <p class="text-xs text-gray-400">Parent of Grade 7 student</p>
+                            <p class="font-semibold text-gray-800 text-sm">Miguel Rivas</p>
+                            <p class="text-xs text-gray-400">Padre de estudiante de 7° grado</p>
                         </div>
                     </div>
                 </div>
@@ -208,39 +238,40 @@
         </div>
     </section>
 
-    <!-- ========== CTA ========== -->
-    <section class="py-16 bg-amber-500">
+    <!-- ========== LLAMADA A LA ACCIÓN ========== -->
+    <section class="py-16 bg-british-blue">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 class="text-3xl font-bold">Ready to Enroll Your Child?</h2>
-            <p class="mt-2 text-amber-50 text-lg">Join our community and give your child the best start.</p>
-            <a href="#" class="mt-6 inline-block bg-white text-amber-500 px-10 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-md hover:shadow-lg">Contact Admissions</a>
+            <h2 class="text-3xl font-bold">¿Listo para inscribir a tu hijo?</h2>
+            <p class="mt-2 text-blue-100 text-lg">Únete a nuestra comunidad y dale el mejor comienzo educativo.</p>
+            <a href="#" class="mt-6 inline-block bg-british-red text-white px-10 py-3 rounded-full font-semibold hover:bg-british-red hover:opacity-90 transition shadow-md hover:shadow-lg">Contactar admisiones</a>
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="bg-british-blue text-white/80 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-graduation-cap text-amber-500 text-xl"></i>
-                    <span class="text-lg font-bold text-white">Bright<span class="text-amber-500">Start</span></span>
+                    <i class="fas fa-crown text-british-red text-xl"></i>
+                    <span class="text-lg font-bold text-white">Liceo <span class="text-british-red">Británico</span></span>
                 </div>
                 <nav class="flex flex-wrap gap-6 text-sm">
-                    <a href="#" class="hover:text-white transition">About</a>
-                    <a href="#" class="hover:text-white transition">Programs</a>
-                    <a href="#" class="hover:text-white transition">Testimonials</a>
-                    <a href="#" class="hover:text-white transition">Contact</a>
-                    <a href="#" class="hover:text-white transition">Privacy</a>
+                    <a href="#" class="hover:text-white transition">Inicio</a>
+                    <a href="#" class="hover:text-white transition">Nosotros</a>
+                    <a href="#" class="hover:text-white transition">Programas</a>
+                    <a href="#" class="hover:text-white transition">Testimonios</a>
+                    <a href="#" class="hover:text-white transition">Contacto</a>
+                    <a href="#" class="hover:text-white transition">Aviso de privacidad</a>
                 </nav>
                 <div class="flex gap-4 text-lg">
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="hover:text-british-red transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-british-red transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-british-red transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-british-red transition"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="mt-8 text-center text-sm text-gray-500 border-t border-gray-800 pt-6">
-                &copy; 2026 BrightStart Academy. All rights reserved.
+            <div class="mt-8 text-center text-sm text-white/50 border-t border-white/20 pt-6">
+                &copy; 2026 Liceo Británico. Todos los derechos reservados.
             </div>
         </div>
     </footer>
